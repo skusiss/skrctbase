@@ -1,0 +1,342 @@
+@import "theme";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline:none;
+  outline: 0; 
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;  
+  font: inherit;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+ol, ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:before, :after{
+  position:absolute;
+  content: '';
+}
+//  ===================  start code for common style here  ===================
+body{
+  background:$lgray;
+  color: $lblack;
+  font-size: 1.025rem;
+  font-family: $reg;
+  letter-spacing: 0.015em;
+  font-weight: 400;
+}
+p,h6{
+  font-size: 1.025rem;
+  line-height: 1.5;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.voffset {
+    margin-top: 2px;
+}
+.voffset1 {
+    margin-top: 5px;
+}
+.voffset2 {
+    margin-top: 10px;
+}
+.voffset3 {
+    margin-top: 15px;
+}
+.voffset4 {
+    margin-top: 30px;
+}
+.voffset5 {
+    margin-top: 40px;
+}
+.voffset6 {
+    margin-top: 60px;
+}
+.voffset7 {
+    margin-top: 80px;
+}
+section{
+  min-height: 100vh;
+  padding-top:120px;
+  padding-bottom:60px;
+  &.darkBg{
+    background:$lblack;
+  }
+}
+.wrap{
+  width: 80%;
+  margin: 0 auto;
+  position:relative;
+  &.whiteBg{
+    background:$white;
+  }
+}
+.aboutSec{
+  h3{
+    padding-top:30px;
+    font-size: 6.125vw;
+    font-weight: 800;
+    color: $lgray;
+    span{
+      color: $bblack;
+    }
+  }
+}
+.servicesSec{
+  .listItems{
+    display: grid;
+    grid-gap:100px 200px;
+    grid-template-columns: repeat(2, 1fr);
+    h3{
+      font-size: 3.5vw;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      color: $base;
+    }
+    p{
+      width: 80%;
+    }
+  }
+}
+.domainSec{
+  color: $lgray;
+  h3{
+    font-size: 2.25vw;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  .listItems{
+    display: grid;
+    grid-gap:100px 200px;
+    grid-template-columns: repeat(4, 1fr);
+    .item{
+      display: flex;
+      flex-direction: column;
+      .domain-icon{
+        height: 80px;
+        width: 80px;
+        display: block;        
+        -webkit-mask-size: cover;
+        background:$lgray;
+        mask-size: 90%;
+        mask-repeat: no-repeat;
+        mask-position: 0 0;
+        &.ecommerce{
+          -webkit-mask-image: url("../img/icon-ecommerce.svg");
+          mask-image: url("../img/icon-ecommerce.svg");
+        }
+        &.b2b{
+          -webkit-mask-image: url("../img/icon-b2b.svg");
+          mask-image: url("../img/icon-b2b.svg");
+        }
+        &.education{
+          -webkit-mask-image: url("../img/icon-education.svg");
+          mask-image: url("../img/icon-education.svg");
+        }
+        &.customization{
+          -webkit-mask-image: url("../img/icon-customization.svg");
+          mask-image: url("../img/icon-customization.svg");
+        }
+        &.tour{
+          -webkit-mask-image: url("../img/icon-travel.svg");
+          mask-image: url("../img/icon-travel.svg");
+        }
+        &.health{
+          -webkit-mask-image: url("../img/icon-health.svg");
+          mask-image: url("../img/icon-health.svg");
+        }
+        &.payroll{
+          -webkit-mask-image: url("../img/icon-payroll.svg");
+          mask-image: url("../img/icon-payroll.svg");
+        }
+        &.realestate{
+          -webkit-mask-image: url("../img/icon-real-estate.svg");
+          mask-image: url("../img/icon-real-estate.svg");
+        }
+      }
+      h6{
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.contactSec{
+  h3{
+    font-size: 6.125vw;
+    font-weight: 800;
+    color: $bblack;
+    span{
+      color: $lblack;
+    }
+  }
+  h4{
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+}
+//  ===================  end code for common style here  =====================
+//  ===================  start code for navigation here  =====================
+nav{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position:fixed;
+  z-index: 99;
+  left: 10%;
+  top: 0;
+  .brand{
+    height: 50px;
+    width: 124px;
+    background:$black;
+    -webkit-mask-image: url("../img/skusiss-logo.svg");
+    mask-image: url("../img/skusiss-logo.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: 0 0;
+  }
+  ul{
+    display: flex;
+    flex-direction: row;
+    li{
+      margin-left: 30px;
+      a{
+        display: block;
+        padding-top:15px;
+        padding-bottom:15px;
+        font-weight: 700;
+        line-height: 30px;
+        position:relative;
+        color: $black;
+        &.active{
+          &:before{
+            width: 10px;
+            height:10px;
+            top: 12px;
+            left:50%;
+            margin-left:-3px;
+            background:$base;
+            -webkit-mask-image: url("../img/leaves.svg");
+            mask-image: url("../img/leaves.svg");
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            mask-repeat: no-repeat;
+            mask-position: 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+//  ===================  end code for navigation here  =======================
+//  ===================  start code for media break points  ==================
+@media (min-width: 1024px){
+
+}
+
+@media only screen and (min-width: 770px) and (max-width: 1020px){
+  
+}
+
+@media only screen and (max-width: 768px) {
+  nav{
+    width: 90%;
+    left: 5%;
+  }
+  .wrap{
+    width: 90%;    
+  }
+  .aboutSec{
+    h3{
+      font-size: 12vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav{
+    width: 100%;
+    left: 0;
+    padding-top:15px;
+    flex-direction: column;
+    .brand{
+      width: 89px;
+      height: 36px;
+    }
+    ul{
+      li{
+        margin-left: 20px;
+        &:first-child{
+          margin-left: 0;
+        }
+        a{
+          font-size: .77rem;
+          padding-top:10px;
+          &.active{
+            &:before{
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  section{
+    //padding-top:100px;
+  }
+  .wrap{
+    width: 80%;
+  }
+  .aboutSec{
+    h3{
+      font-size: 11vw;
+    }
+  }
+  .servicesSec{
+    .listItems{
+      grid-gap:100px;
+      grid-template-columns: repeat(1, 1fr);
+      p{
+        width: 100%;
+      }
+    }
+  }
+  .domainSec{
+    color: $white;
+    h3{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  
+}
+//  ===================  start code for media break points  ==================
