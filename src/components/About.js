@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
 
-class About extends Component {
-  render() {
+const  About = () => {
     return (		
 		<section className="darkBg aboutSec" id="aboutSec">
 			<Helmet>
@@ -15,7 +14,6 @@ class About extends Component {
 			</div>	
 		</section>
     )
-  }
-}
+ }
 
 export default About;

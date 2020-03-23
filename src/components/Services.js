@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
 
-class Services extends Component {
-  render() {
-    return (
+
+const Services = () => {
+	return (
 		<section className="whiteBg servicesSec">
 			<Helmet>
 				<title>We provide digital solutions</title>
@@ -18,11 +18,11 @@ class Services extends Component {
 					</li>
 					<li className="item">
 						<h3>Web design &<br/>development</h3>
-						<p>creating corporate websites that are inventive and unique to address hour budding business needs</p>
+						<p>Creating corporate websites that are inventive and unique to address hour budding business needs.</p>
 					</li>
 					<li className="item">
 						<h3>Mobile apps<br/>development</h3>
-						<p>We create all kinds of Android and iOS apps that are interactive, engaging and fun. We have created various server side applications with server components being installed</p>
+						<p>We create all kinds of Android and iOS apps that are interactive, engaging and fun. We have created various server side applications with server components being installed.</p>
 					</li>
 					<li className="item">
 						<h3>Digital<br/>marketing</h3>
@@ -32,7 +32,6 @@ class Services extends Component {
 			</div>	
 		</section>
     )
-  }
 }
 
 export default Services;

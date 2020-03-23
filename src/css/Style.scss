@@ -90,6 +90,51 @@ section{
     background:$white;
   }
 }
+.homeSec{
+  .textInfo{
+    position:fixed;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9;
+    h1{
+      font-size: 8vw;
+      font-weight: 800;
+      color: $bblack;
+      text-transform: uppercase;
+      animation-name: textanim;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      line-height: 1;
+    }
+    h3{
+      font-size: 3vw;
+      font-weight: 400;
+      color: $bblack;
+      line-height: 1.25;
+    }
+    p{
+      margin-top: 30px;
+    }
+  }
+}
+@keyframes textanim {
+  from {
+    letter-spacing: 5px;
+  }
+  to {
+    letter-spacing: -10px;
+    color: $lblack;
+  }
+}
+
 .aboutSec{
   h3{
     padding-top:30px;
@@ -158,7 +203,7 @@ section{
           -webkit-mask-image: url("../img/icon-customization.svg");
           mask-image: url("../img/icon-customization.svg");
         }
-        &.tour{
+        &.travel{
           -webkit-mask-image: url("../img/icon-travel.svg");
           mask-image: url("../img/icon-travel.svg");
         }
@@ -170,7 +215,7 @@ section{
           -webkit-mask-image: url("../img/icon-payroll.svg");
           mask-image: url("../img/icon-payroll.svg");
         }
-        &.realestate{
+        &.accommodation{
           -webkit-mask-image: url("../img/icon-real-estate.svg");
           mask-image: url("../img/icon-real-estate.svg");
         }
@@ -192,8 +237,39 @@ section{
     }
   }
   h4{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 700;
+  }
+}
+.quoteForm{
+  h3{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 1.525rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h4{
+    display: inline-block;
+    margin-right: 6px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  input, select{
+    margin-right: 6px;
+    border:0;
+    background:transparent;
+    border-bottom:1px solid $lblack;
+    font-weight: 700;
+    padding-bottom:5px;
+  }
+  input[type=submit]{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.525rem;
+    cursor: pointer;
   }
 }
 //  ===================  end code for common style here  =====================
@@ -323,6 +399,9 @@ nav{
     .listItems{
       grid-gap:100px;
       grid-template-columns: repeat(1, 1fr);
+      h3{
+        font-size: 7vw;
+      }
       p{
         width: 100%;
       }
@@ -332,6 +411,43 @@ nav{
     color: $white;
     h3{
       margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    .listItems{
+      grid-gap:50px;
+      grid-template-columns: repeat(3, 1fr);
+      .item{
+        .domain-icon{
+          height: 60px;
+          width: 60px;
+        }
+        h6{
+          font-size: .77rem;
+        }
+      }
+    }
+  }
+  .quoteForm{
+    h3{
+      font-size: 1.125rem;
+    }
+    h4{
+      font-size: 1rem;
+    }
+    input, select{
+      margin-right: 6px;
+      border:0;
+      background:transparent;
+      border-bottom:1px solid $lblack;
+      font-weight: 700;
+      padding-bottom:5px;
+    }
+    input[type=submit]{
+      display: block;
+      text-transform: uppercase;
+      font-weight: 800;
+       font-size: 1.125rem;
+      cursor: pointer;
     }
   }
 }
