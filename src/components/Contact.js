@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
 import Quotation from './Quotation';
 import Contactinfo from './Contactinfo';
-class Contact extends Component {
+
+export default class Contact extends Component {
 	constructor(props){
 		super (props);
 		this.state = {
@@ -28,7 +29,3 @@ class Contact extends Component {
     )
   }
 }
-
-
-
-export default Contact;

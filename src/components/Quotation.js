@@ -1,8 +1,10 @@
 import React, { Component} from 'react';
-class Quotation extends Component {
+
+
+export default class Quotation extends Component {
   render() {
     return (
-			<form className="quoteForm">
+			<form id="quoteForm" className="quoteForm" method="POST">
 				<h3>Have a project to do?</h3>
 				<h4>Yes, I am interested in discussing a </h4> 
 				<select name="services">
@@ -25,4 +27,3 @@ class Quotation extends Component {
     )
   }
 }
-export default Quotation;
