@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Helmet} from "react-helmet";
-class Home extends Component {
-  render() {
-    return (
+
+const Home =() => {
+ 	return (
 		<section className="whiteBg homeSec">
 			<Helmet>
 				<title>Skusiss | Digital Solutions</title>
@@ -11,12 +11,11 @@ class Home extends Component {
 			</Helmet>
 			<div className="textInfo">
 				<h1>Digital Solutions</h1>
-				<h3>creative IDEAS with creative people</h3>
-				<p>Web Designing / Development / Mobile Apps / Consulting</p>
+				<h3>creative people - creative idea</h3>
+				<p>Web Designing / Development / Mobile Apps / Digital Marketing / Consulting</p>
 			</div>
 		</section>
     )
-  }
 }
 
 export default Home;

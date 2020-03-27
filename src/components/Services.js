@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Helmet} from "react-helmet";
-
+import Serviceslist from './Serviceslist';
 
 const Services = () => {
 	return (
@@ -12,22 +12,10 @@ const Services = () => {
 			</Helmet>			
 			<div className="wrap">
 				<ul className="listItems">
-					<li className="item">
-						<h3>Corporate<br/>Identity</h3>
-						<p>Our corporate identity design work shows up in branding, logo design, business cards, infographics and more.</p>
-					</li>
-					<li className="item">
-						<h3>Web design &<br/>development</h3>
-						<p>Creating corporate websites that are inventive and unique to address hour budding business needs.</p>
-					</li>
-					<li className="item">
-						<h3>Mobile apps<br/>development</h3>
-						<p>We create all kinds of Android and iOS apps that are interactive, engaging and fun. We have created various server side applications with server components being installed.</p>
-					</li>
-					<li className="item">
-						<h3>Digital<br/>marketing</h3>
-						<p>We specialize in comprehensive digital marketing service to set the strategic direction.</p>
-					</li>
+					<Serviceslist listhead="Corporate Identity" paratxt="Our corporate identity design work shows up in branding, logo design, business cards, infographics and more." />
+					<Serviceslist listhead="Web Design & Development" paratxt="Designing and developing websites that are inventive and unique to address hour budding business needs." />
+					<Serviceslist listhead="Mobile Apps Development" paratxt="We create all kinds of Android and iOS apps that are interactive, engaging and fun. We have created various server side applications with server components being installed." />
+					<Serviceslist listhead="Digital Marketing" paratxt="We specialize in comprehensive digital marketing service to set the strategic direction." />
 				</ul>
 			</div>	
 		</section>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
 import Quotation from './Quotation';
+import Contactinfo from './Contactinfo';
 class Contact extends Component {
 	constructor(props){
 		super (props);
@@ -11,7 +12,7 @@ class Contact extends Component {
 	}
   render() {
     return (
-		<section className="whiteBg contactSec">
+		<section className="darkBg contactSec">
 			<Helmet>
 				<title>Get in touch</title>
 				<meta name="description" content="Let's connect" />
@@ -19,10 +20,8 @@ class Contact extends Component {
 			</Helmet>
 			<div className="wrap">
 				<h3>Let's <span>get in</span> touch</h3>
-				<h6>Email</h6>
-				<h4><a href={`mailto: ${this.state.email}`}>{this.state.email}</a></h4>
-				<h6>Call</h6>
-				<h4><a href={`tel: ${this.state.phone}`}>{this.state.phone}</a></h4><br/>
+				<Contactinfo type="Email" details="skusiss@gmail.com" />				
+				<Contactinfo type="Phone" details="+91 9350250496" />				
 				<Quotation />
 			</div>	
 		</section>

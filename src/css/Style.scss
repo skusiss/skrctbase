@@ -77,7 +77,6 @@ a{
 section{
   min-height: 100vh;
   padding-top:120px;
-  padding-bottom:60px;
   &.darkBg{
     background:$lblack;
   }
@@ -109,36 +108,37 @@ section{
       color: $bblack;
       text-transform: uppercase;
       animation-name: textanim;
-      animation-duration: 6s;
+      animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate-reverse;
       line-height: 1;
     }
     h3{
-      font-size: 3vw;
-      font-weight: 400;
+      margin-top: 30px;
+      font-size: 3.44vw;
+      font-weight: 500;
       color: $bblack;
-      line-height: 1.25;
+      line-height: 1;
     }
     p{
-      margin-top: 30px;
+      margin-top: 5px;
+      font-size: 1.33vw;
     }
   }
 }
 @keyframes textanim {
   from {
-    letter-spacing: 5px;
+    letter-spacing: .05em;
   }
   to {
-    letter-spacing: -10px;
+    letter-spacing: -.05em;
     color: $lblack;
   }
 }
 
 .aboutSec{
   h3{
-    padding-top:30px;
-    font-size: 6.125vw;
+    font-size: 6.5vw;
     font-weight: 800;
     color: $lgray;
     span{
@@ -149,18 +149,19 @@ section{
 .servicesSec{
   .listItems{
     display: grid;
-    grid-gap:100px 200px;
+    grid-gap:15vh 10vw;
     grid-template-columns: repeat(2, 1fr);
     h3{
-      font-size: 3.5vw;
+      font-size: 3.25vw;
       font-weight: 800;
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 2vh;
       text-transform: capitalize;
       color: $base;
+      width: 70%;
     }
     p{
-      width: 80%;
+     width: 80%;
     }
   }
 }
@@ -228,49 +229,80 @@ section{
   }
 }
 .contactSec{
+  color: $lgray;
   h3{
-    font-size: 6.125vw;
+    font-size: 6.5vw;
     font-weight: 800;
-    color: $bblack;
+    color: $lgray;
     span{
-      color: $lblack;
+      color: $bblack;
     }
   }
   h4{
-    margin-bottom: 15px;
     font-weight: 700;
+  }
+  h6{
+    margin-bottom: 20px;
   }
 }
 .quoteForm{
+  color: $lgray;
   h3{
     text-transform: uppercase;
     text-decoration: underline;
     font-size: 1.525rem;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
   }
   h4{
     display: inline-block;
     margin-right: 6px;
-    line-height: 1.5;
+    line-height: 3;
     margin-top: 10px;
     margin-bottom: 10px;
   }
   input, select{
     margin-right: 6px;
     border:0;
-    background:transparent;
-    border-bottom:1px solid $lblack;
-    font-weight: 700;
+    background:rgba($bblack, .75);
+    font-weight: 800;
     padding-bottom:5px;
+    color: $lgray;
+    padding:10px 15px;
   }
   input[type=submit]{
+    margin-top: 2vh;
     display: block;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.525rem;
     cursor: pointer;
+    background:transparent;
+    border:3px double $lgray;
   }
+}
+.notfound{
+  position:fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  padding:0;
+  h1{
+      font-size: 8vw;
+      font-weight:400;
+      color: $bblack;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    h4{
+      line-height: 1;
+    }
 }
 //  ===================  end code for common style here  =====================
 //  ===================  start code for navigation here  =====================
@@ -390,9 +422,25 @@ nav{
   .wrap{
     width: 80%;
   }
+  .homeSec{
+    .textInfo{
+      h1{
+        font-size: 8.8vw;
+      }
+      h3{
+        margin-top: 10px;
+        font-size: 6.125vw;
+      }
+      p{
+        margin-top: 5px;
+        font-size: 3vw;
+      }
+    }
+  }
   .aboutSec{
     h3{
       font-size: 11vw;
+      line-height: 1.8;
     }
   }
   .servicesSec{
@@ -411,18 +459,18 @@ nav{
     color: $white;
     h3{
       margin-bottom: 20px;
-      font-size: 1.5rem;
+      font-size: 1.125rem;
     }
     .listItems{
-      grid-gap:50px;
+      grid-gap:7vh 12vw;
       grid-template-columns: repeat(3, 1fr);
       .item{
         .domain-icon{
-          height: 60px;
-          width: 60px;
+          height: 50px;
+          width: 50px;
         }
         h6{
-          font-size: .77rem;
+          font-size: .66rem;
         }
       }
     }

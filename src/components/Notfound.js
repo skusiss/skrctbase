@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Notfound extends Component {
-  render() {
-    return (
-		<section>
-			<div className="wrap">
-				<h1>Not Found</h1>
-			</div>	
-		</section>
-    )
-  }
+const Notfound =()=> {
+  return (
+	<section className="whiteBg notfound">
+		<h1>Sorry</h1>
+		<h4>We couldn't find that page.</h4>
+	</section>
+  )
 }
 
 export default Notfound;

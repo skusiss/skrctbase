@@ -9,7 +9,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Notfound from './components/Notfound';
 
-import './css/Style.css';
+import './css/Style.scss';
 
 class Main extends Component {
   render() {
